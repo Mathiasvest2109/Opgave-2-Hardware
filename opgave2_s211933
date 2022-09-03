@@ -1,0 +1,135 @@
+// opgave2_s211933.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <stdio.h>
+
+/* Mathias V, 3/9 - 2022
+
+I dette program udregnes et gennemsnit vha integer værdier som indtastes i konsollen i 4 forskellige instanser. Brugeren stoppes hvis tallet ikke er immel 0 og 100.
+
+Gennemsnittet for de 4 instanser beregnes hvorefter brugeren sættes i en karakterkatagori, som er bestemt ved 6 forskellige if/else statements. Resultatet printes i konsollen.
+
+*/
+
+int main()
+{
+    //Instantiering af integer variabel for de 4 opgaver, som skal bedømmes
+    int a, b, c, d, gennemsnit;
+
+    //Bestemmelse af a
+    printf_s("Indtast point til opagve 1\n");
+    scanf_s("%d", &a);
+
+    //vi sikrer os at tallet er mellem 0 og 100
+    if (a < 0 || a > 100)
+    {
+        //Bruger sættes i loop indtil de vælger en brugbar værdi
+        while (a < 0 || a > 100)
+        {
+
+            //Ny int indtastes
+            printf_s("fejl - Indtast et tal mellem 0 og 100\n");
+            scanf_s("%d", &a);
+        }
+    }
+
+    //Bestemmelse af b
+    printf_s("\nIndtast point til opagve 2\n");
+    scanf_s("%d", &b);
+
+    //vi sikrer os at tallet er mellem 0 og 100
+    if (b < 0 || b > 100)
+    {
+        //Bruger sættes i loop indtil de vælger en brugbar værdi
+        while (b < 0 || b > 100)
+        {
+            //Ny int indtastes
+            printf_s("fejl - Indtast et tal mellem 0 og 100\n");
+            scanf_s("%d", &b);
+        }
+    }
+
+    //Bestemmelse af c
+    printf_s("\nIndtast point til opagve 3\n");
+    scanf_s("%d", &c);
+
+    //vi sikrer os at tallet er mellem 0 og 100
+    if (c < 0 || c > 100)
+    {
+        //Bruger sættes i loop indtil de vælger en brugbar værdi
+        while (c < 0 || c > 100)
+        {
+            //Ny int indtastes
+            printf_s("fejl - Indtast et tal mellem 0 og 100\n");
+            scanf_s("%d", &c);
+        }
+    }
+
+    //Bestemmelse af d
+    printf_s("\nIndtast point til opagve 4\n");
+    scanf_s("%d", &d);
+
+    //vi sikrer os at tallet er mellem 0 og 100
+    if (d < 0 || d > 100)
+    {
+        //Bruger sættes i loop indtil de vælger en brugbar værdi
+        while (d < 0 || d > 100)
+        {
+            //Ny int indtastes
+            printf_s("fejl - Indtast et tal mellem 0 og 100\n");
+            scanf_s("%d", &d);
+        }
+    }
+
+    //gennemsnit for point til de 4 opgaver beregnes
+    gennemsnit = (a + b + c + d) / 4;
+    printf_s("\npoint gennemsnit er %d\n", gennemsnit);
+
+    //Karakter findes vha if/else statements og printes i konsollen
+    if (gennemsnit >= 90) 
+    {
+
+        printf_s("\nElev faar 12\n");
+    }
+    else 
+    {
+        if (gennemsnit >= 80 && gennemsnit <= 89) 
+        {
+
+            printf_s("\nElev faar 10\n");
+        }
+        else 
+        {
+            if(gennemsnit >= 70 && gennemsnit <= 79)
+            {
+
+                printf_s("\nElev faar 7\n");
+            }
+            else
+            {
+                if (gennemsnit >= 60 && gennemsnit <= 69)
+                {
+
+                    printf_s("\nElev faar 4\n");
+                }
+                else
+                {
+                    if (gennemsnit >= 40 && gennemsnit <= 59)
+                    {
+
+                        printf_s("\nElev faar 02\n");
+                    }
+                    else
+                    {
+                        if (gennemsnit >= 0 && gennemsnit <= 39)
+                        {
+                            printf_s("\nElev faar 00\n");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
